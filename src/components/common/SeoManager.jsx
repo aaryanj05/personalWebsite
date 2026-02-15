@@ -12,16 +12,19 @@ const ROUTE_META = {
   "/": {
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
+    indexable: true,
   },
   "/projects": {
     title: "Projects | Aaryan Joharapurkar",
     description:
       "Projects built by Aaryan Joharapurkar across software engineering, data, and product.",
+    indexable: false,
   },
   "/about": {
     title: "About | Aaryan Joharapurkar",
     description:
       "About Aaryan Joharapurkar, a Software Engineering & Business student at Ivey Business School.",
+    indexable: false,
   },
 };
 
@@ -59,7 +62,7 @@ function getMetaForPath(pathname) {
   const normalized = normalizePathname(pathname);
 
   if (ROUTE_META[normalized]) {
-    return { ...ROUTE_META[normalized], indexable: true };
+    return ROUTE_META[normalized];
   }
 
   if (normalized.startsWith("/notes/")) {
@@ -70,7 +73,7 @@ function getMetaForPath(pathname) {
       return {
         title: `${note.title} | Aaryan Joharapurkar`,
         description: note.summary || DEFAULT_DESCRIPTION,
-        indexable: true,
+        indexable: false,
       };
     }
   }
@@ -92,7 +95,11 @@ export default function SeoManager() {
     document.title = title;
     setCanonical(canonical);
     setOrCreateMeta("name", "description", description);
-    setOrCreateMeta("name", "robots", indexable ? "index,follow" : "noindex,follow");
+    setOrCreateMeta(
+      "name",
+      "robots",
+      indexable ? "index,follow" : "noindex,follow",
+    );
     setOrCreateMeta("property", "og:title", title);
     setOrCreateMeta("property", "og:description", description);
     setOrCreateMeta("property", "og:url", canonical);
