@@ -7,6 +7,7 @@ import { NotesProvider } from "./features/notes/NotesContext";
 import BearProvider from "./features/bear/context/BearContext";
 import ErrorBoundary from "./components/common/ErrorBoundary";
 import ScrollRestoration from "./components/common/ScrollRestoration";
+import SeoManager from "./components/common/SeoManager";
 
 // This reduces initial bundle size without changing functionality
 const Home = lazy(() => import("./features/home/components/Home"));
@@ -21,6 +22,7 @@ function App() {
     <ErrorBoundary>
       <BearProvider>
         <NotesProvider>
+          <SeoManager />
           {/* Skip Navigation Link for Accessibility */}
           <a
             href="#main-content"

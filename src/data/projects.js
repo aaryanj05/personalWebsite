@@ -47,7 +47,7 @@ export const projects = [
     description:
       "Led a team of 8 to launch 3 web apps for student orgs; mentored new devs and ran weekly code-reviews.",
     image: "https://placehold.co/481x280/3b82f6/ffffff?text=WDS",
-    logo: "https://www.aaryanj.tech/assets/WDS-BqX8pcx0.png",
+    logo: "/experiences-logo/western-developers-society.jpeg",
     gradient: "bg-gradient-to-r from-blue-600 to-indigo-800",
     category: "Web Development",
     technologies: ["React", "Node.js", "MongoDB", "Leadership"],
