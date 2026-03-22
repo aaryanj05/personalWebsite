@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { notesIndex } from "../../data/notes";
 
 const SITE_ORIGIN = "https://aaryanj.tech";
+const GA_MEASUREMENT_ID = "G-MN2B3BC4HJ";
 const DEFAULT_TITLE =
   "Aaryan Joharapurkar | Software Engineering & Business @ Ivey";
 const DEFAULT_DESCRIPTION =
@@ -103,6 +104,14 @@ export default function SeoManager() {
     setOrCreateMeta("property", "og:title", title);
     setOrCreateMeta("property", "og:description", description);
     setOrCreateMeta("property", "og:url", canonical);
+
+    // Fire a page_view event on every SPA navigation
+    if (typeof window.gtag === "function") {
+      window.gtag("config", GA_MEASUREMENT_ID, {
+        page_title: title,
+        page_location: canonical,
+      });
+    }
   }, [location.pathname]);
 
   return null;
