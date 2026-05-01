@@ -2,15 +2,15 @@
 
 export const experiences = [
   {
-    id: "american-global-2025",
-    companyName: "American Global",
-    position: "Data Analytics & Strategy Intern",
+    id: "rbc-amplify-2025",
+    companyName: "RBC Amplify",
+    position: "Business Analyst",
     dateRange: "May 2025 - Present",
-    logo: "/experiences-logo/american-global.jpeg",
-    location: "Oakville, ON",
+    logo: "/experiences-logo/rbc.svg",
+    location: "Toronto, ON",
     description:
-      "One of the first interns on the Data Analytics team, contributing to impactful initiatives within the construction insurance sector.",
-    technologies: ["Python", "Power Tools", "Data Analysis"],
+      "Joining RBC Amplify as a Business Analyst in a 4-month incubator program, contributing to innovative initiatives within one of Canada's largest financial institutions.",
+    technologies: ["Business Analysis", "Strategy", "FinTech"],
     category: "internship",
     featured: true,
     sortOrder: 1,
