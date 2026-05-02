@@ -16,7 +16,6 @@
 // ============================================================================
 
 import { experiences } from "../data/experiences";
-import { projects } from "../data/projects";
 import { storiesData } from "../data/stories";
 import { aboutImages } from "../data/aboutImages";
 import { notesIndex, getNoteBySlug as getNoteMock } from "../data/notes";

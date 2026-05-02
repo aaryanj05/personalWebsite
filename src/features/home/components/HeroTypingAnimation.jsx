@@ -348,8 +348,8 @@ const HeroTypingAnimation = React.memo(() => {
             <div className="flex flex-col h-full">
               <p className="italic text-2xl md:text-3xl mb-2">currently</p>
               <p className="font-sans text-[#9b9cbe] font-medium uppercase tracking-[0.2em] text-sm md:text-base leading-relaxed -mt-1 mb-0">
-                <span className="block">Data Analytics & Strategy</span>
-                <span className="block">@ American Global</span>
+                <span className="block">Business Analyst</span>
+                <span className="block">@ RBC Amplify</span>
               </p>
             </div>
             <div className="flex flex-col h-full">
