@@ -57,7 +57,7 @@ const AboutMe = () => {
                       Business + SWE Student at Ivey Business School
                     </span>
                     , but most of what I care about happens outside the
-                    classroom. I’m in third year, graduating in 2027, and based
+                    classroom. I’m in third year, graduating in 2028, and based
                     near Toronto.
                   </p>
 
